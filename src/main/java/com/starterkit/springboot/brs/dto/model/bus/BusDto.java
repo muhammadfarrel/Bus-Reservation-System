@@ -9,7 +9,7 @@ import lombok.ToString;
 import lombok.experimental.Accessors;
 
 /**
- * Created by Arpit Khandelwal.
+ * Created by Kelompok 3 Kelompok 3.
  */
 @Getter
 @Setter

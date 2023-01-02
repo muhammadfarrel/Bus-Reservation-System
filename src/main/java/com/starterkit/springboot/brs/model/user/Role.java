@@ -9,7 +9,7 @@ import javax.persistence.*;
 import java.util.Collection;
 
 /**
- * Created by Arpit Khandelwal.
+ * Created by Kelompok 3 Kelompok 3.
  */
 @Getter
 @Setter

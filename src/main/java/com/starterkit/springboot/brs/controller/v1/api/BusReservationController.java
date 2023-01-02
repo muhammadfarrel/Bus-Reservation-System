@@ -25,7 +25,7 @@ import java.util.List;
 import java.util.Optional;
 
 /**
- * Created by Arpit Khandelwal.
+ * Kelompok 3
  */
 @RestController
 @RequestMapping("/api/v1/reservation")

@@ -11,13 +11,13 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 /**
- * Created by Arpit Khandelwal.
+ * Created by Kelompok 3 Kelompok 3.
  */
 @Component
 public class CustomAuthenticationSuccessHandler implements AuthenticationSuccessHandler {
     @Override
     public void onAuthenticationSuccess(HttpServletRequest request,
-                                        HttpServletResponse response, Authentication authentication)
+            HttpServletResponse response, Authentication authentication)
             throws IOException, ServletException {
         response.setStatus(HttpServletResponse.SC_OK);
         for (GrantedAuthority auth : authentication.getAuthorities()) {

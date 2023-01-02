@@ -25,7 +25,7 @@ import static com.starterkit.springboot.brs.exception.ExceptionType.DUPLICATE_EN
 import static com.starterkit.springboot.brs.exception.ExceptionType.ENTITY_NOT_FOUND;
 
 /**
- * Created by Arpit Khandelwal.
+ * Created by Kelompok 3 Kelompok 3.
  */
 @Component
 public class UserServiceImpl implements UserService {

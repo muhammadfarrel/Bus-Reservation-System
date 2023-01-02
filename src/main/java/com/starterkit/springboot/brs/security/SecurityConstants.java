@@ -1,7 +1,7 @@
 package com.starterkit.springboot.brs.security;
 
 /**
- * Created by Arpit Khandelwal.
+ * Created by Kelompok 3 Kelompok 3.
  */
 public interface SecurityConstants {
     String SECRET = "SecretKeyToGenJWTs";

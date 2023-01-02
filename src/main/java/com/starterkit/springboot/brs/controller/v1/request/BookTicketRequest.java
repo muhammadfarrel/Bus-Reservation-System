@@ -14,7 +14,7 @@ import javax.validation.constraints.NotNull;
 import java.util.Date;
 
 /**
- * Created by Arpit Khandelwal.
+ * Created by Kelompok 3 Kelompok 3.
  */
 @Getter
 @Setter

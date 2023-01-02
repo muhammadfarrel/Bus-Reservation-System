@@ -1,7 +1,7 @@
 package com.starterkit.springboot.brs.util;
 
 /**
- * Created by Arpit Khandelwal.
+ * Created by Kelompok 3 Kelompok 3.
  */
 public class RandomStringUtil {
     // function to generate a random string of length n
@@ -17,8 +17,7 @@ public class RandomStringUtil {
 
             // generate a random number between
             // 0 to inputString variable length
-            int index
-                    = (int) (inputStringUcase.length()
+            int index = (int) (inputStringUcase.length()
                     * Math.random());
 
             // add Character one by one in end of sb
@@ -29,4 +28,3 @@ public class RandomStringUtil {
         return sb.toString();
     }
 }
-

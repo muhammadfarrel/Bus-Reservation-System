@@ -9,7 +9,7 @@ import org.springframework.data.repository.CrudRepository;
 import java.util.List;
 
 /**
- * Created by Arpit Khandelwal.
+ * Created by Kelompok 3 Kelompok 3.
  */
 public interface TripRepository extends CrudRepository<Trip, Long> {
     Trip findBySourceStopAndDestStopAndBus(Stop source, Stop destination, Bus bus);

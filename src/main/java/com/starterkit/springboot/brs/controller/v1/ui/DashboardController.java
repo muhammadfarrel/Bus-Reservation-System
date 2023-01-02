@@ -23,7 +23,7 @@ import java.util.List;
 import java.util.Set;
 
 /**
- * Created by Arpit Khandelwal.
+ * Created by Kelompok 3 Kelompok 3.
  */
 @Controller
 public class DashboardController {
@@ -60,7 +60,8 @@ public class DashboardController {
     }
 
     @PostMapping(value = "/agency")
-    public ModelAndView updateAgency(@Valid @ModelAttribute("agencyFormData") AgencyFormCommand agencyFormCommand, BindingResult bindingResult) {
+    public ModelAndView updateAgency(@Valid @ModelAttribute("agencyFormData") AgencyFormCommand agencyFormCommand,
+            BindingResult bindingResult) {
         ModelAndView modelAndView = new ModelAndView("agency");
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
         UserDto userDto = userService.findUserByEmail(auth.getName());
@@ -90,7 +91,8 @@ public class DashboardController {
     }
 
     @PostMapping(value = "/bus")
-    public ModelAndView addNewBus(@Valid @ModelAttribute("busFormData") BusFormCommand busFormCommand, BindingResult bindingResult) {
+    public ModelAndView addNewBus(@Valid @ModelAttribute("busFormData") BusFormCommand busFormCommand,
+            BindingResult bindingResult) {
         ModelAndView modelAndView = new ModelAndView("bus");
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
         UserDto userDto = userService.findUserByEmail(auth.getName());
@@ -130,7 +132,8 @@ public class DashboardController {
     }
 
     @PostMapping(value = "/trip")
-    public ModelAndView addNewTrip(@Valid @ModelAttribute("tripFormData") TripFormCommand tripFormCommand, BindingResult bindingResult) {
+    public ModelAndView addNewTrip(@Valid @ModelAttribute("tripFormData") TripFormCommand tripFormCommand,
+            BindingResult bindingResult) {
         ModelAndView modelAndView = new ModelAndView("trip");
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
         UserDto userDto = userService.findUserByEmail(auth.getName());
@@ -183,7 +186,8 @@ public class DashboardController {
     }
 
     @PostMapping(value = "/profile")
-    public ModelAndView updateProfile(@Valid @ModelAttribute("profileForm") ProfileFormCommand profileFormCommand, BindingResult bindingResult) {
+    public ModelAndView updateProfile(@Valid @ModelAttribute("profileForm") ProfileFormCommand profileFormCommand,
+            BindingResult bindingResult) {
         ModelAndView modelAndView = new ModelAndView("profile");
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
         UserDto userDto = userService.findUserByEmail(auth.getName());
@@ -203,7 +207,8 @@ public class DashboardController {
     }
 
     @PostMapping(value = "/password")
-    public ModelAndView changePassword(@Valid @ModelAttribute("passwordForm") PasswordFormCommand passwordFormCommand, BindingResult bindingResult) {
+    public ModelAndView changePassword(@Valid @ModelAttribute("passwordForm") PasswordFormCommand passwordFormCommand,
+            BindingResult bindingResult) {
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
         UserDto userDto = userService.findUserByEmail(auth.getName());
         if (bindingResult.hasErrors()) {

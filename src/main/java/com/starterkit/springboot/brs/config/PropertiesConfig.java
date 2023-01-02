@@ -6,7 +6,7 @@ import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Component;
 
 /**
- * Created by Arpit Khandelwal.
+ * Kelompok 3
  */
 @Component
 @PropertySource("classpath:custom.properties")

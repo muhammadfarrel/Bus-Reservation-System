@@ -10,45 +10,39 @@ import java.util.Collection;
 import java.util.Set;
 
 /**
- * Created by Arpit Khandelwal.
+ * Created by Kelompok 3 Kelompok 3.
  */
 @Getter
 @Setter
 @NoArgsConstructor
 @Accessors(chain = true)
 @Entity
-@Table(name = "user",
-        indexes = @Index(
-                name = "idx_user_email",
-                columnList = "email",
-                unique = true
-        ))
+@Table(name = "user", indexes = @Index(name = "idx_user_email", columnList = "email", unique = true))
 public class User {
-    @Id
-    @Column(name = "user_id")
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+        @Id
+        @Column(name = "user_id")
+        @GeneratedValue(strategy = GenerationType.IDENTITY)
+        private Long id;
 
-    private String email;
+        private String email;
 
-    private String password;
+        private String password;
 
-    @Column(name = "first_name")
-    private String firstName;
+        @Column(name = "first_name")
+        private String firstName;
 
-    @Column(name = "last_name")
-    private String lastName;
+        @Column(name = "last_name")
+        private String lastName;
 
-    @Column(name = "mobile_number")
-    private String mobileNumber;
+        @Column(name = "mobile_number")
+        private String mobileNumber;
 
-    @ManyToMany(fetch = FetchType.LAZY)
-    @JoinTable(name = "user_role",
-            joinColumns = {@JoinColumn(name = "user_id")},
-            inverseJoinColumns = {@JoinColumn(name = "role_id")})
-    private Collection<Role> roles;
+        @ManyToMany(fetch = FetchType.LAZY)
+        @JoinTable(name = "user_role", joinColumns = { @JoinColumn(name = "user_id") }, inverseJoinColumns = {
+                        @JoinColumn(name = "role_id") })
+        private Collection<Role> roles;
 
-    public String getFullName() {
-        return firstName != null ? firstName.concat(" ").concat(lastName) : "";
-    }
+        public String getFullName() {
+                return firstName != null ? firstName.concat(" ").concat(lastName) : "";
+        }
 }

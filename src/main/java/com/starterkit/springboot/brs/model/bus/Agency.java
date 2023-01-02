@@ -10,35 +10,30 @@ import javax.persistence.*;
 import java.util.Set;
 
 /**
- * Created by Arpit Khandelwal.
+ * Created by Kelompok 3 Kelompok 3.
  */
 @Getter
 @Setter
 @NoArgsConstructor
 @Accessors(chain = true)
 @Entity
-@Table(name = "agency",
-        indexes = @Index(
-                name = "idx_agency_code",
-                columnList = "code",
-                unique = true
-        ))
+@Table(name = "agency", indexes = @Index(name = "idx_agency_code", columnList = "code", unique = true))
 public class Agency {
-    @Id
-    @Column(name = "agency_id")
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+        @Id
+        @Column(name = "agency_id")
+        @GeneratedValue(strategy = GenerationType.IDENTITY)
+        private Long id;
 
-    private String code;
+        private String code;
 
-    private String name;
+        private String name;
 
-    private String details;
+        private String details;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "owner_user_id")
-    private User owner;
+        @ManyToOne(fetch = FetchType.LAZY)
+        @JoinColumn(name = "owner_user_id")
+        private User owner;
 
-    @OneToMany(mappedBy = "agency", cascade = CascadeType.ALL)
-    private Set<Bus> buses;
+        @OneToMany(mappedBy = "agency", cascade = CascadeType.ALL)
+        private Set<Bus> buses;
 }

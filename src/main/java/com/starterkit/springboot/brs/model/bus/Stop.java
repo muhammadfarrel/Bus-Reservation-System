@@ -8,30 +8,23 @@ import lombok.experimental.Accessors;
 import javax.persistence.*;
 
 /**
- * Created by Arpit Khandelwal.
+ * Created by Kelompok 3 Kelompok 3.
  */
 @Getter
 @Setter
 @NoArgsConstructor
 @Accessors(chain = true)
 @Entity
-@Table(
-        name = "stop",
-        indexes = @Index(
-                name = "idx_stop_code",
-                columnList = "code",
-                unique = true
-        )
-)
+@Table(name = "stop", indexes = @Index(name = "idx_stop_code", columnList = "code", unique = true))
 public class Stop {
-    @Id
-    @Column(name = "stop_id")
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+        @Id
+        @Column(name = "stop_id")
+        @GeneratedValue(strategy = GenerationType.IDENTITY)
+        private Long id;
 
-    private String code;
+        private String code;
 
-    private String name;
+        private String name;
 
-    private String detail;
+        private String detail;
 }

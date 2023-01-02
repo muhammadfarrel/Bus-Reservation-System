@@ -19,7 +19,7 @@ import java.util.ArrayList;
 import static com.starterkit.springboot.brs.security.SecurityConstants.*;
 
 /**
- * Created by Arpit Khandelwal.
+ * Created by Kelompok 3 Kelompok 3.
  */
 public class ApiJWTAuthorizationFilter extends BasicAuthenticationFilter {
     public ApiJWTAuthorizationFilter(AuthenticationManager authManager) {
@@ -28,8 +28,8 @@ public class ApiJWTAuthorizationFilter extends BasicAuthenticationFilter {
 
     @Override
     protected void doFilterInternal(HttpServletRequest req,
-                                    HttpServletResponse res,
-                                    FilterChain chain) throws IOException, ServletException {
+            HttpServletResponse res,
+            FilterChain chain) throws IOException, ServletException {
         String header = req.getHeader(HEADER_STRING);
         if (header == null || !header.startsWith(TOKEN_PREFIX)) {
             chain.doFilter(req, res);

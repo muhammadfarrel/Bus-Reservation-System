@@ -5,7 +5,7 @@ import com.starterkit.springboot.brs.model.bus.Bus;
 import org.springframework.data.repository.CrudRepository;
 
 /**
- * Created by Arpit Khandelwal.
+ * Created by Kelompok 3 Kelompok 3.
  */
 public interface BusRepository extends CrudRepository<Bus, Long> {
     Bus findByCode(String busCode);

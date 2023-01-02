@@ -4,7 +4,7 @@ import com.starterkit.springboot.brs.dto.model.bus.TripDto;
 import com.starterkit.springboot.brs.model.bus.Trip;
 
 /**
- * Created by Arpit Khandelwal.
+ * Created by Kelompok 3 Kelompok 3.
  */
 public class TripMapper {
     public static TripDto toTripDto(Trip trip) {

@@ -3,7 +3,7 @@ package com.starterkit.springboot.brs.service;
 import com.starterkit.springboot.brs.dto.model.user.UserDto;
 
 /**
- * Created by Arpit Khandelwal.
+ * Created by Kelompok 3 Kelompok 3.
  */
 public interface UserService {
     /**

@@ -9,7 +9,7 @@ import lombok.Setter;
 import lombok.experimental.Accessors;
 
 /**
- * @author Arpit Khandelwal
+ * @author Kelompok 3 Kelompok 3
  */
 @Getter
 @Setter
@@ -87,7 +87,8 @@ public class Response<T> {
     }
 
     public enum Status {
-        OK, BAD_REQUEST, UNAUTHORIZED, VALIDATION_EXCEPTION, EXCEPTION, WRONG_CREDENTIALS, ACCESS_DENIED, NOT_FOUND, DUPLICATE_ENTITY
+        OK, BAD_REQUEST, UNAUTHORIZED, VALIDATION_EXCEPTION, EXCEPTION, WRONG_CREDENTIALS, ACCESS_DENIED, NOT_FOUND,
+        DUPLICATE_ENTITY
     }
 
     @Getter
@@ -109,4 +110,3 @@ public class Response<T> {
     }
 
 }
-

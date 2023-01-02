@@ -7,25 +7,25 @@ import java.util.List;
 import java.util.Set;
 
 /**
- * Created by Arpit Khandelwal.
+ * Created by Kelompok 3 Kelompok 3.
  */
 public interface BusReservationService {
 
-    //Stop related methods
+    // Stop related methods
     Set<StopDto> getAllStops();
-    
+
     Set<HistoryDto> getAllHistory();
 
     StopDto getStopByCode(String stopCode);
 
-    //Agency related methods
+    // Agency related methods
     AgencyDto getAgency(UserDto userDto);
 
     AgencyDto addAgency(AgencyDto agencyDto);
 
     AgencyDto updateAgency(AgencyDto agencyDto, BusDto busDto);
 
-    //Trip related methods
+    // Trip related methods
     TripDto getTripById(Long tripID);
 
     List<TripDto> addTrip(TripDto tripDto);
@@ -34,14 +34,14 @@ public interface BusReservationService {
 
     List<TripDto> getAvailableTripsBetweenStops(String sourceStopCode, String destinationStopCode);
 
-    //Trips Schedule related methods
+    // Trips Schedule related methods
     List<TripScheduleDto> getAvailableTripSchedules(String sourceStopCode, String destinationStopCode, String tripDate);
 
     TripScheduleDto getTripSchedule(TripDto tripDto, String tripDate, boolean createSchedForTrip);
 
-    //Ticket related method
+    // Ticket related method
     TicketDto bookTicket(TripScheduleDto tripScheduleDto, UserDto passenger);
-    
+
     HistoryDto history(TripScheduleDto tripScheduleDto, UserDto passenger);
 
 }

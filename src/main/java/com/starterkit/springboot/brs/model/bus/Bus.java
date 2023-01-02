@@ -8,34 +8,27 @@ import lombok.experimental.Accessors;
 import javax.persistence.*;
 
 /**
- * Created by Arpit Khandelwal.
+ * Created by Kelompok 3 Kelompok 3.
  */
 @Getter
 @Setter
 @NoArgsConstructor
 @Accessors(chain = true)
 @Entity
-@Table(
-        name = "bus",
-        indexes = @Index(
-                name = "idx_bus_code",
-                columnList = "code",
-                unique = true
-        )
-)
+@Table(name = "bus", indexes = @Index(name = "idx_bus_code", columnList = "code", unique = true))
 public class Bus {
-    @Id
-    @Column(name = "bus_id")
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+        @Id
+        @Column(name = "bus_id")
+        @GeneratedValue(strategy = GenerationType.IDENTITY)
+        private Long id;
 
-    private String code;
+        private String code;
 
-    private int capacity;
+        private int capacity;
 
-    private String make;
+        private String make;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "agency_id")
-    private Agency agency;
+        @ManyToOne(fetch = FetchType.LAZY)
+        @JoinColumn(name = "agency_id")
+        private Agency agency;
 }

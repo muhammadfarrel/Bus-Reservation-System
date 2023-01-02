@@ -1,6 +1,5 @@
 package com.starterkit.springboot.brs.controller.v1.ui;
 
-
 import com.starterkit.springboot.brs.controller.v1.command.AdminSignupFormCommand;
 import com.starterkit.springboot.brs.dto.model.bus.AgencyDto;
 import com.starterkit.springboot.brs.dto.model.user.UserDto;
@@ -18,7 +17,7 @@ import org.springframework.web.servlet.ModelAndView;
 import javax.validation.Valid;
 
 /**
- * Created by Arpit Khandelwal.
+ * Created by Kelompok 3 Kelompok 3.
  */
 
 @Controller
@@ -29,12 +28,12 @@ public class AdminController {
     @Autowired
     private UserService userService;
 
-    @GetMapping(value = {"/", "/login"})
+    @GetMapping(value = { "/", "/login" })
     public ModelAndView login() {
         return new ModelAndView("login");
     }
 
-    @GetMapping(value = {"/logout"})
+    @GetMapping(value = { "/logout" })
     public String logout() {
         SecurityContextHolder.getContext().setAuthentication(null);
         return "redirect:login";
@@ -53,7 +52,9 @@ public class AdminController {
     }
 
     @PostMapping(value = "/signup")
-    public ModelAndView createNewAdmin(@Valid @ModelAttribute("adminSignupFormData") AdminSignupFormCommand adminSignupFormCommand, BindingResult bindingResult) {
+    public ModelAndView createNewAdmin(
+            @Valid @ModelAttribute("adminSignupFormData") AdminSignupFormCommand adminSignupFormCommand,
+            BindingResult bindingResult) {
         ModelAndView modelAndView = new ModelAndView("signup");
         if (bindingResult.hasErrors()) {
             return modelAndView;
@@ -82,12 +83,12 @@ public class AdminController {
                 .setLastName(adminSignupRequest.getLastName())
                 .setMobileNumber(adminSignupRequest.getMobileNumber())
                 .setAdmin(true);
-        UserDto admin = userService.signup(userDto); //register the admin
+        UserDto admin = userService.signup(userDto); // register the admin
         AgencyDto agencyDto = new AgencyDto()
                 .setName(adminSignupRequest.getAgencyName())
                 .setDetails(adminSignupRequest.getAgencyDetails())
                 .setOwner(admin);
-        busReservationService.addAgency(agencyDto); //add the agency for this admin
+        busReservationService.addAgency(agencyDto); // add the agency for this admin
         return admin;
     }
 }

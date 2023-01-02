@@ -24,7 +24,7 @@ import java.util.List;
 import static com.starterkit.springboot.brs.security.SecurityConstants.*;
 
 /**
- * Created by Arpit Khandelwal.
+ * Created by Kelompok 3 Kelompok 3.
  */
 public class ApiJWTAuthenticationFilter extends UsernamePasswordAuthenticationFilter {
     private final AuthenticationManager authenticationManager;
@@ -36,15 +36,14 @@ public class ApiJWTAuthenticationFilter extends UsernamePasswordAuthenticationFi
 
     @Override
     public Authentication attemptAuthentication(HttpServletRequest req,
-                                                HttpServletResponse res) throws AuthenticationException {
+            HttpServletResponse res) throws AuthenticationException {
         try {
             User user = new ObjectMapper().readValue(req.getInputStream(), User.class);
             return authenticationManager.authenticate(
                     new UsernamePasswordAuthenticationToken(
                             user.getEmail(),
                             user.getPassword(),
-                            new ArrayList<>())
-            );
+                            new ArrayList<>()));
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
@@ -52,11 +51,12 @@ public class ApiJWTAuthenticationFilter extends UsernamePasswordAuthenticationFi
 
     @Override
     protected void successfulAuthentication(HttpServletRequest req,
-                                            HttpServletResponse res,
-                                            FilterChain chain,
-                                            Authentication auth) throws IOException, ServletException {
+            HttpServletResponse res,
+            FilterChain chain,
+            Authentication auth) throws IOException, ServletException {
         if (auth.getPrincipal() != null) {
-            org.springframework.security.core.userdetails.User user = (org.springframework.security.core.userdetails.User) auth.getPrincipal();
+            org.springframework.security.core.userdetails.User user = (org.springframework.security.core.userdetails.User) auth
+                    .getPrincipal();
             String login = user.getUsername();
             if (login != null && login.length() > 0) {
                 Claims claims = Jwts.claims().setSubject(login);

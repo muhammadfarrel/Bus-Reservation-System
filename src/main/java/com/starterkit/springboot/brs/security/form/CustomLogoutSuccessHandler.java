@@ -10,12 +10,13 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 /**
- * Created by Arpit Khandelwal.
+ * Created by Kelompok 3 Kelompok 3.
  */
 public class CustomLogoutSuccessHandler extends SimpleUrlLogoutSuccessHandler
         implements LogoutSuccessHandler {
     @Override
-    public void onLogoutSuccess(HttpServletRequest request, HttpServletResponse response, Authentication authentication) throws IOException, ServletException {
+    public void onLogoutSuccess(HttpServletRequest request, HttpServletResponse response, Authentication authentication)
+            throws IOException, ServletException {
         super.onLogoutSuccess(request, response, authentication);
     }
 }

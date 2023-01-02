@@ -10,7 +10,7 @@ import java.util.HashSet;
 import java.util.stream.Collectors;
 
 /**
- * Created by Arpit Khandelwal.
+ * Created by Kelompok 3 Kelompok 3.
  */
 @Component
 public class UserMapper {

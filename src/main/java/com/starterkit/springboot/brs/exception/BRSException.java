@@ -10,7 +10,7 @@ import java.util.Optional;
 /**
  * A helper class to generate RuntimeExceptions with a little AI inbuilt.
  * <p>
- * Created by Arpit Khandelwal.
+ * Created by Kelompok 3 Kelompok 3.
  */
 @Component
 public class BRSException {
@@ -54,13 +54,15 @@ public class BRSException {
      * @param args
      * @return
      */
-    public static RuntimeException throwExceptionWithId(EntityType entityType, ExceptionType exceptionType, Integer id, String... args) {
+    public static RuntimeException throwExceptionWithId(EntityType entityType, ExceptionType exceptionType, Integer id,
+            String... args) {
         String messageTemplate = getMessageTemplate(entityType, exceptionType).concat(".").concat(id.toString());
         return throwException(exceptionType, messageTemplate, args);
     }
 
     /**
-     * Returns new RuntimeException based on EntityType, ExceptionType, messageTemplate and args
+     * Returns new RuntimeException based on EntityType, ExceptionType,
+     * messageTemplate and args
      *
      * @param entityType
      * @param exceptionType
@@ -68,7 +70,8 @@ public class BRSException {
      * @param args
      * @return
      */
-    public static RuntimeException throwExceptionWithTemplate(EntityType entityType, ExceptionType exceptionType, String messageTemplate, String... args) {
+    public static RuntimeException throwExceptionWithTemplate(EntityType entityType, ExceptionType exceptionType,
+            String messageTemplate, String... args) {
         return throwException(exceptionType, messageTemplate, args);
     }
 
@@ -79,7 +82,8 @@ public class BRSException {
      * @param args
      * @return
      */
-    private static RuntimeException throwException(ExceptionType exceptionType, String messageTemplate, String... args) {
+    private static RuntimeException throwException(ExceptionType exceptionType, String messageTemplate,
+            String... args) {
         if (ExceptionType.ENTITY_NOT_FOUND.equals(exceptionType)) {
             return new EntityNotFoundException(format(messageTemplate, args));
         } else if (ExceptionType.DUPLICATE_ENTITY.equals(exceptionType)) {
@@ -92,7 +96,7 @@ public class BRSException {
         return entityType.name().concat(".").concat(exceptionType.getValue()).toLowerCase();
     }
 
-    private static String format(String template, String ... args) {
+    private static String format(String template, String... args) {
         Optional<String> templateContent = Optional.ofNullable(propertiesConfig.getConfigValue(template));
         if (templateContent.isPresent()) {
             return MessageFormat.format(templateContent.get(), (Object[]) args);

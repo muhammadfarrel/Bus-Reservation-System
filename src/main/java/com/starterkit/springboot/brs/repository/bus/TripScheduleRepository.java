@@ -5,7 +5,7 @@ import com.starterkit.springboot.brs.model.bus.TripSchedule;
 import org.springframework.data.repository.CrudRepository;
 
 /**
- * Created by Arpit Khandelwal.
+ * Created by Kelompok 3 Kelompok 3.
  */
 public interface TripScheduleRepository extends CrudRepository<TripSchedule, Long> {
     TripSchedule findByTripDetailAndTripDate(Trip tripDetail, String tripDate);
