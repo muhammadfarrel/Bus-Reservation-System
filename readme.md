@@ -35,8 +35,14 @@
     </a>
 </p>
 
+## Team member
+- [Muhammad Farrel](https://www.linkedin.com/in/muhammad-farrel-116649193/)
+- [Rizki Syafaat Amardita](https://www.linkedin.com/in/rizki-syafaat-amardita-385459201/)
+- [Miftah Shidqi Rabbani ](https://www.linkedin.com/in/miftah-shidqi-rabbani-5b25a7118/)
+
 ## Table of Contents
 
+- [Team member](#team-member)
 - [Table of Contents](#table-of-contents)
 - [Philosophy](#philosophy)
 - [Medium Articles](#medium-articles)
