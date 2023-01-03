@@ -454,8 +454,8 @@ Here are the various screens of the Admin portal that you should be able to use 
 
 ## Contributors
 
-[Muhammad Farrel](https://www.linkedin.com/in/muhammad-farrel-116649193/)
-[Rizki Syafaat Amardita](https://www.linkedin.com/in/rizki-syafaat-amardita-385459201/)
+[Muhammad Farrel](https://www.linkedin.com/in/muhammad-farrel-116649193/) || 
+[Rizki Syafaat Amardita](https://www.linkedin.com/in/rizki-syafaat-amardita-385459201/) || 
 [Miftah Shidqi Rabbani ](https://www.linkedin.com/in/miftah-shidqi-rabbani-5b25a7118/)
 
 ## Link Github
