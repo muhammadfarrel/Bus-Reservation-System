@@ -35,32 +35,32 @@
     </a>
 </p>
 
-## Team member
+# Team Member
 - [Muhammad Farrel](https://www.linkedin.com/in/muhammad-farrel-116649193/)
 - [Rizki Syafaat Amardita](https://www.linkedin.com/in/rizki-syafaat-amardita-385459201/)
 - [Miftah Shidqi Rabbani ](https://www.linkedin.com/in/miftah-shidqi-rabbani-5b25a7118/)
 
 ## Table of Contents
 
-- [Team member](#team-member)
-- [Table of Contents](#table-of-contents)
-- [Philosophy](#philosophy)
-- [Medium Articles](#medium-articles)
-- [Spring Boot](#spring-boot)
-- [Application](#application)
-- [Database Schema](#database-schema)
-- [Technology](#technology)
-- [Application Structure](#application-structure)
-- [Response and Exception Handling](#response-and-exception-handling)
-- [UI Architecture](#ui-architecture)
-- [Running the server locally](#running-the-server-locally)
-- [Running the server in Docker Container](#running-the-server-in-docker-container)
-      - [Docker](#docker)
-      - [Docker Compose](#docker-compose)
-- [API Documentation](#api-documentation)
-- [User Interface](#user-interface)
-- [Contributors](#contributors)
-- [License](#license)
+- [Team Member](#team-member)
+  - [Table of Contents](#table-of-contents)
+  - [Philosophy](#philosophy)
+  - [Medium Articles](#medium-articles)
+  - [Spring Boot](#spring-boot)
+  - [Application](#application)
+  - [Database Schema](#database-schema)
+  - [Technology](#technology)
+  - [Application Structure](#application-structure)
+  - [Response and Exception Handling](#response-and-exception-handling)
+  - [UI Architecture](#ui-architecture)
+  - [Running the server locally](#running-the-server-locally)
+  - [Running the server in Docker Container](#running-the-server-in-docker-container)
+        - [Docker](#docker)
+        - [Docker Compose](#docker-compose)
+  - [API Documentation](#api-documentation)
+  - [User Interface](#user-interface)
+  - [Contributors](#contributors)
+  - [License](#license)
 
 ## Philosophy
 
