@@ -37,19 +37,24 @@
 
 ## Table of Contents
 
-1. [Philosophy](#Philosophy)
-2. [Medium Articles](#Medium-Articles)
-3. [Spring Boot](#Spring-Boot)
-4. [Application](#Application)
-5. [Database Schema](#Database-Schema)
-6. [Technology](#Technology)
-7. [Application Structure](#Application-Structure)
-8. [Run Locally](#Running-the-server-locally)
-9. [Run Insider Docker](#Running-the-server-in-Docker-Container)
-10. [API Documentation](#API-Documentation)
-11. [User Interface](#User-Interface)
-12. [Contributor](#Contributor)
-13. [License](#License)
+- [Table of Contents](#table-of-contents)
+- [Philosophy](#philosophy)
+- [Medium Articles](#medium-articles)
+- [Spring Boot](#spring-boot)
+- [Application](#application)
+- [Database Schema](#database-schema)
+- [Technology](#technology)
+- [Application Structure](#application-structure)
+- [Response and Exception Handling](#response-and-exception-handling)
+- [UI Architecture](#ui-architecture)
+- [Running the server locally](#running-the-server-locally)
+- [Running the server in Docker Container](#running-the-server-in-docker-container)
+      - [Docker](#docker)
+      - [Docker Compose](#docker-compose)
+- [API Documentation](#api-documentation)
+- [User Interface](#user-interface)
+- [Contributors](#contributors)
+- [License](#license)
 
 ## Philosophy
 
@@ -93,6 +98,7 @@ The _Admin user_ can access this application on browser (laptop or mobile/tablet
 4. Create an agency
 5. Add buses to the agency
 6. Add trips consisting of predefined stops and buses
+7. View History
 
 The _End user_ can use their mobile application (yet to be built, however the REST APIs are ready and could be used via Postman or Swagger) to perform the following actions :
 
@@ -101,7 +107,8 @@ The _End user_ can use their mobile application (yet to be built, however the RE
 3. List all available stops
 4. Search a trip between any two stops
 5. Filter search results with a date option
-6. Book a ticket for a given trip schedule
+6. Book a ticket for a given trip schedule and Insert the books to history
+7. View History
 
 Admin interface and REST APIs both have their independent authentication mechanisms, the web application uses the cookie based authentication (provided by default by Spring security) and the REST API uses the JWT authentication for access. This application assumes the availability of 'MySQL' installation on the localhost where the server will run or the use of docker-compose to boot up a mysql container and link the application with it within the realm of docker.
 
@@ -363,7 +370,7 @@ You can use the User spec to execute the login api for generating the Bearer tok
 <p align="center">
     <b>User Spec</b><br>
     <br>
-    <img width="600" src="https://github.com/muhammadfarrel/Bus-Reservation-System/blob/master/docs/images/swagger-screens/swagg.JPG">
+    <img width="600" src="https://github.com/muhammadfarrel/Bus-Reservation-System/blob/master/docs/images/swagg.JPG">
 </p>
 
 <p align="center">
