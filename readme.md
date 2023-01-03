@@ -377,7 +377,7 @@ You can use the User spec to execute the login api for generating the Bearer tok
 <p align="center">
     <b>User Spec</b><br>
     <br>
-    <img width="600" src="https://github.com/muhammadfarrel/Bus-Reservation-System/blob/master/docs/images/swagg.JPG">
+    <img width="600" src="https://github.com/muhammadfarrel/Bus-Reservation-System/blob/master/docs/images/swagg-user.png">
 </p>
 
 <p align="center">
@@ -395,7 +395,7 @@ You can use the User spec to execute the login api for generating the Bearer tok
 <p align="center">
     <b>BRS Spec</b><br>
     <br>
-    <img width="600" src="https://github.com/muhammadfarrel/Bus-Reservation-System/blob/master/docs/images/swagger-screens/swagger-4.png">
+    <img width="600" src="https://github.com/muhammadfarrel/Bus-Reservation-System/blob/master/docs/images/swagg.JPG">
 </p>
 
 <p align="center">
